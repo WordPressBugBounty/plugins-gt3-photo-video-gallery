@@ -53,8 +53,13 @@ class GT3_Notice {
 	}
 
 	function __construct(){
+		add_action('admin_print_scripts-toplevel_page_gt3_photo_gallery_options', array( $this, 'remove_admin_notices' ));
 		add_action('admin_print_styles', array( $this, 'admin_print_styles' ));
 		add_action('wp_ajax_gt3pg_disable_notice', array( $this, 'ajax_handler' ));
+	}
+
+	public function remove_admin_notices(){
+		remove_all_actions('admin_notices');
 	}
 
 	public function admin_print_styles(){

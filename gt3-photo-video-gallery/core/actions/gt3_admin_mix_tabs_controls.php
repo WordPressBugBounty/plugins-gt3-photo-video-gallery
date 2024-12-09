@@ -24,7 +24,7 @@ add_filter('gt3_admin_mix_tabs_controls', function($controls){
 	$controls[10] = new gt3pg_admin_mix_tab_control(array(
 		'name'        => 'linkTo',
 		'title'       => __('Link Image To', 'gt3pg'),
-		'description' => __('You may use this option to choose where to link your image to.', 'gt3pg'),
+		'description' => __('You can use this option to choose where to link your image to.', 'gt3pg'),
 		'option'      => new gt3select(array(
 			'name'    => 'linkTo',
 			'attr'    => array( new gt3attr('class', 'link-to'), ),
@@ -55,7 +55,7 @@ add_filter('gt3_admin_mix_tabs_controls', function($controls){
 	$control      = new gt3pg_admin_mix_tab_control(array(
 		'name'        => 'imageSize',
 		'title'       => __('Image Size', 'gt3pg'),
-		'description' => __('Please select the proper image size to display in the content.', 'gt3pg'),
+		'description' => __('Please select the appropriate image size to display within the content.', 'gt3pg'),
 		'option'      => new gt3select(array(
 			'name'    => 'imageSize',
 			'attr'    => array( new gt3attr('class', 'size'), ),
@@ -80,7 +80,7 @@ add_filter('gt3_admin_mix_tabs_controls', function($controls){
 	$control         = new gt3pg_admin_mix_tab_control(array(
 		'name'        => 'columns',
 		'title'       => __('Columns', 'gt3pg'),
-		'description' => __('You have an option to display from one up to nine image columns.', 'gt3pg'),
+		'description' => __('You have the option to display between one and nine image columns.', 'gt3pg'),
 		'option'      => new gt3select(array(
 			'name'    => 'columns',
 			'attr'    => array( new gt3attr('class', 'columns') ),
@@ -98,7 +98,7 @@ add_filter('gt3_admin_mix_tabs_controls', function($controls){
 	$controls[50] = new gt3pg_admin_mix_tab_control(array(
 		'name'        => 'random',
 		'title'       => __('Random Order', 'gt3pg'),
-		'description' => __('Display the images by default or randomly.', 'gt3pg'),
+		'description' => __('Display the images either by default order or randomly.', 'gt3pg'),
 		'option'      => new gt3input_onoff(array(
 			'name' => 'random',
 		))
@@ -106,7 +106,7 @@ add_filter('gt3_admin_mix_tabs_controls', function($controls){
 	$controls[60] = new gt3pg_admin_mix_tab_control(array(
 		'name'        => 'margin',
 		'title'       => __('Margin, px', 'gt3pg'),
-		'description' => __('You can add margins to the images. Please note that they are in pixels.', 'gt3pg'),
+		'description' => __('You can add margins to the images, which are measured in pixels.', 'gt3pg'),
 		'option'      => new gt3input(array(
 			'name' => 'margin',
 			'attr' => new ArrayObject(array(
@@ -133,7 +133,7 @@ add_filter('gt3_admin_mix_tabs_controls', function($controls){
 	$controls[80] = new gt3pg_admin_mix_tab_control(array(
 		'name'        => 'borderType',
 		'title'       => __('Image Border', 'gt3pg'),
-		'description' => __('You can either display or hide the image border.', 'gt3pg'),
+		'description' => __('You can choose to either display or hide the image border.', 'gt3pg'),
 		'option'      => new gt3input_onoff(array(
 			'name' => 'borderType',
 		))
@@ -142,7 +142,7 @@ add_filter('gt3_admin_mix_tabs_controls', function($controls){
 	$controls[90] = new gt3pg_admin_mix_tab_control(array(
 		'name'            => 'borderSize',
 		'title'           => __('Border Size, px', 'gt3pg'),
-		'description'     => __('You can add margins to the images. Please note that they are in pixels.', 'gt3pg'),
+		'description'     => __('You can add margins to the images, which are measured in pixels.', 'gt3pg'),
 		'main_wrap_class' => 'border-setting',
 		'option'          => new gt3input(array(
 			'name' => 'borderSize',
@@ -182,7 +182,7 @@ add_filter('gt3_admin_mix_tabs_controls', function($controls){
 	$controls[120] = new gt3pg_admin_mix_tab_control(array(
 		'name'             => 'gt3pg_text_before_head',
 		'title'            => __('Custom CSS', 'gt3pg'),
-		'description'      => __('You can add custom CSS to the gallery.', 'gt3pg'),
+		'description'      => __('You can add custom CSS to customize the gallery.', 'gt3pg'),
 		'input_wrap_class' => 'nofloat',
 		'option'           => new gt3textarea(array(
 			'name' => 'gt3pg_text_before_head',

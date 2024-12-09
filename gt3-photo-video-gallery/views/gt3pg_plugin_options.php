@@ -6,7 +6,7 @@ use GT3\PhotoVideoGallery\Settings;
 use GT3\PhotoVideoGallery\Assets;
 
 global $gt3_photo_gallery_defaults, $gt3_photo_gallery;
-$plugin_info    = get_plugin_data(GT3PG_PLUGINPATH.'/gt3-photo-video-gallery.php');
+$plugin_info    = get_plugin_data(GT3PG_PLUGINPATH.'/gt3-photo-video-gallery.php', false, false);
 $theme_list     = (array) gt3_banner_addon();
 $plugin_title   = apply_filters('gt3pg_admin_title', GT3PG_ADMIN_TITLE);
 $plugin_version = apply_filters('gt3pg_admin_version', $plugin_info['Version']);
@@ -62,6 +62,7 @@ wp_enqueue_script('gt3pg_admin_js');
 				wp_enqueue_script('gt3pg_settings', GT3PG_PLUGINROOTURL.'/dist/js/admin/settings.js', null, GT3PG_PLUGIN_VERSION);
 				wp_enqueue_style('gt3pg_settings', GT3PG_PLUGINROOTURL.'/dist/css/admin/settings.css', null, GT3PG_PLUGIN_VERSION);
 				wp_enqueue_style('gt3pg_admin_css', GT3PG_PLUGINROOTURL.'/dist/css/admin/admin.css', null, GT3PG_PLUGIN_VERSION);
+				wp_enqueue_style('gt3pg_skin_css', GT3PG_PLUGINROOTURL.'/dist/css/admin/gt3-theme-new-style.css', null, GT3PG_PLUGIN_VERSION);
 
 				$settings = Settings::instance();
 				$assets = Assets::instance();

@@ -9,7 +9,7 @@ if(!defined('ABSPATH')) {
 if(!function_exists('get_plugin_data')) {
 	require_once(ABSPATH.'wp-admin/includes/plugin.php');
 }
-$plugin_info          = get_plugin_data(__DIR__.'/gt3-photo-video-gallery.php');
+$plugin_info          = get_plugin_data(__DIR__.'/gt3-photo-video-gallery.php', false, false);
 
 define('GT3PG_PLUGIN_VERSION', $plugin_info['Version']);
 define('GT3PG_PLUGINNAME', 'GT3 Photo & Video Gallery');

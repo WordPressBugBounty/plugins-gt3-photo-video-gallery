@@ -29,7 +29,7 @@ defined('ABSPATH') OR exit;
 					return false;
 				}
 				$this->file                  = $file;
-				$plugin_info                 = get_plugin_data( $file );
+				$plugin_info                 = get_plugin_data( $file , false, false);
 				$this->version               = $plugin_info['Version'];
 				$this->plugin_name           = $plugin_info['Name'];
 
