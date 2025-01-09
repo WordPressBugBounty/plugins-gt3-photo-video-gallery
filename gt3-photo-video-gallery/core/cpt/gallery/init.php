@@ -819,9 +819,9 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 					$cats      = array();
 					foreach($post_cats as $post_cat_term) {
 						if(!empty($_GET[$column]) && $_GET[$column] == $post_cat_term->slug) {
-							$cats[] = '<b><a href="'.$this_url.'">'.$post_cat_term->name.'</a></b>';
+							$cats[] = '<b><a href="'.esc_url($this_url).'">'.esc_html($post_cat_term->name).'</a></b>';
 						} else {
-							$cats[] = '<a href="'.add_query_arg(array( $column => $post_cat_term->slug ), $this_url).'">'.$post_cat_term->name.'</a>';
+							$cats[] = '<a href="'.esc_url(add_query_arg(array( $column => $post_cat_term->slug ), $this_url)).'">'.esc_html($post_cat_term->name).'</a>';
 						}
 					}
 					if(count($cats)) {

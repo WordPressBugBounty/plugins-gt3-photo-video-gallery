@@ -3,7 +3,7 @@ Contributors: gt3themes
 Tags: gallery, image gallery, wordpress gallery plugin, photo gallery, gallery block
 Requires at least: 6.0
 Tested up to: 6.7
-Stable tag: 2.7.7.24
+Stable tag: 2.7.7.25
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -181,6 +181,11 @@ You can add any type of the gallery block into the product description. But we a
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 2.7.7.25 =
+* Improved: Plugin core functionality
+* Fixed: Security issue
+* Fixed: Minor bug fixes
 
 = 2.7.7.24 =
 * Improved: WordPress 6.7+ compatibility
