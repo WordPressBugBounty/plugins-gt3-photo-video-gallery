@@ -2,8 +2,8 @@
 Contributors: gt3themes
 Tags: gallery, image gallery, wordpress gallery plugin, photo gallery, gallery block
 Requires at least: 6.0
-Tested up to: 6.7
-Stable tag: 2.7.7.25
+Tested up to: 6.8
+Stable tag: 2.7.7.26
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,10 +15,6 @@ GT3 Image Gallery - create photo gallery, video gallery, block gallery, slider a
 
 Create an awesome look for your photo galleries with ease.  Drag and drop images and videos to your gallery and publish them on your website in minutes. The current version of the GT3 photo & video gallery plugin works with latest Gutenberg blocks editor.
 
-Important: The latest plugin version meets all Google Pagespeed requirements and if you check our sample photo gallery speed test you will get 100 score.
-
-[Check Gallery Pagespeed Test](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Flivewp.site%2Fwp%2Fmd%2Fgoogle%2Fpagespeed%2F&tab=desktop)
-
 <h3>How to Add GT3 Photo & Video Gallery Block in Gutenberg</h3>
 In this video you will see how easily you can create gallery using GT3 Gutenberg photo & video gallery blocks.
 
@@ -28,7 +24,7 @@ Please note that you can convert Gutenberg block gallery from Grid to Masonry an
 
 Please read the plugin documentation to better understand how it work.
 
-[Online Documentation](https://gt3wpgallery.com/kb/)
+[Online Documentation](https://help.gt3themes.com/gt3-photo-video-gallery-wordpress-plugin/)
 
 <h3>Elementor Compatibility</h3>
 The lite version is fully compatible with Elementor page builder. It comes with Grid and Masonry photo gallery widgets.
@@ -181,6 +177,13 @@ You can add any type of the gallery block into the product description. But we a
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 2.7.7.26 =
+* Improved: Plugin core functionality
+* Improved: Galleries optimization
+* Fixed: PHP 8.4 issue
+* Fixed: Security issue
+* Fixed: Minor bug fixes
 
 = 2.7.7.25 =
 * Improved: Plugin core functionality

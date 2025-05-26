@@ -109,6 +109,8 @@ function gt3pg_gallery_shortcode($attr){
 		}
 	}
 
+	$atts['border_col'] = isset($atts['border_col']) ? sanitize_hex_color($atts['border_col']) : '';
+
 	if($atts['border_type'] === 1 || $atts['border_type'] === '1' || $atts['border_type'] === true || $atts['border_type'] === 'on' || $atts['border_type'] === 'yes') {
 		$atts['border_type'] = 'on';
 	} else {

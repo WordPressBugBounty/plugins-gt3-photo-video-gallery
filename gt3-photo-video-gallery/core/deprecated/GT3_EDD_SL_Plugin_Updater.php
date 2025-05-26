@@ -9,6 +9,7 @@
 	 * @author Easy Digital Downloads
 	 * @version 1.6.15
 	 */
+	#[AllowDynamicProperties]
 	class GT3_EDD_SL_Plugin_Updater {
 
 		private $api_url     = '';
