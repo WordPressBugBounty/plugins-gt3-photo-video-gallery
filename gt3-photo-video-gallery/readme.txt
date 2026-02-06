@@ -2,8 +2,8 @@
 Contributors: gt3themes
 Tags: gallery, image gallery, wordpress gallery plugin, photo gallery, gallery block
 Requires at least: 6.0
-Tested up to: 6.8
-Stable tag: 2.7.7.26
+Tested up to: 6.9
+Stable tag: 2.7.7.27
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -11,9 +11,10 @@ GT3 Image Gallery - create photo gallery, video gallery, block gallery, slider a
 
 == Description ==
 
-[GT3 Photo Gallery](https://gt3themes.com/gt3-photo-video-gallery-pro-is-live-now/) is a WordPress plugin that comes with a set of different custom gallery blocks. It is absolutely free. The GT3 gallery plugin allows extending the functionality of the classic WordPress image gallery. You can easily customize the look and feel of any photo or video gallery using the global GT3 photo gallery settings along with the custom settings for each individaul gallery.
+[GT3 Photo Gallery](https://gt3themes.com/gt3-photo-and-video-gallery-pro/) is a WordPress plugin that comes with a set of different custom gallery blocks. It is absolutely free. The GT3 gallery plugin allows extending the functionality of the classic WordPress image gallery. You can easily customize the look and feel of any photo or video gallery using the global GT3 photo gallery settings along with the custom settings for each individaul gallery.
 
-Create an awesome look for your photo galleries with ease.  Drag and drop images and videos to your gallery and publish them on your website in minutes. The current version of the GT3 photo & video gallery plugin works with latest Gutenberg blocks editor.
+Create an awesome look for your photo galleries with ease. Drag and drop images and videos to your gallery and publish them on your website in minutes. The current version of the GT3 photo & video gallery plugin works with latest Gutenberg blocks editor.
+
 
 <h3>How to Add GT3 Photo & Video Gallery Block in Gutenberg</h3>
 In this video you will see how easily you can create gallery using GT3 Gutenberg photo & video gallery blocks.
@@ -38,7 +39,7 @@ Stay Tuned: The new Gutenberg gallery blocks, Elementor and WPBakery compatible 
 
 There is a Pro version of this plugin. You can get it with 50% discount. Limited time offer.
 
-[GT3 Photo & Video Gallery Pro](https://gt3themes.com/gt3-photo-video-gallery-pro-is-live-now/)
+[GT3 Photo & Video Gallery Pro](https://gt3themes.com/gt3-photo-and-video-gallery-pro/)
 
 **What you get with Pro:**
 
@@ -177,6 +178,13 @@ You can add any type of the gallery block into the product description. But we a
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 2.7.7.27 =
+* Improved: Plugin core functionality
+* Improved: Galleries performance
+* Fixed: Elementor frontend rendering
+* Fixed: Security issue
+* Fixed: Minor bug fixes
 
 = 2.7.7.26 =
 * Improved: Plugin core functionality

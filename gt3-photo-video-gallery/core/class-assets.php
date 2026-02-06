@@ -220,7 +220,7 @@ class Assets {
 	}
 
 	protected function elementor_recursive_style($data){
-		if(in_array($data['elType'], array( 'section', 'column' ))) {
+		if(in_array($data['elType'], array( 'section', 'container', 'column' ))) {
 			foreach($data['elements'] as $modules) {
 				$this->elementor_recursive_style($modules);
 			}
@@ -313,7 +313,7 @@ class Assets {
 		foreach($block['innerBlocks'] as $chunk) {
 			$this->blocks_print_styles($chunk);
 		}
-		
+
 		if(array_key_exists('blockName', $block) && is_string($block['blockName'])
 		   && strpos($block['blockName'], 'gt3pg') !== false) {
 			$module = str_replace('gt3pg-pro/', '', $block['blockName']);
@@ -345,9 +345,9 @@ class Assets {
 			filemtime(GT3PG_LITE_JS_PATH.'gutenberg/editor.js'),
 			true
 		);
-		
+
 		$this->register_script__action();
-		
+
 		$settings = Settings::instance();
 
 		wp_localize_script(
@@ -374,7 +374,7 @@ class Assets {
 		);
 
 		$this->frontend_gutenberg();
-		
+
 		wp_enqueue_style('gt3pg-lite-frontend');
 		wp_enqueue_script('gt3pg-lite-frontend');
 

@@ -118,7 +118,7 @@ defined('ABSPATH') OR exit;
 				if ( isset( $_GET['sl_activation'] ) && ! empty( $_GET['sl_message'] ) ) {
 					switch ( $_GET['sl_activation'] ) {
 						case 'false':
-							echo '<div class="error"><p>' . urldecode( $_GET['sl_message'] ) . '</p></div>';
+							echo '<div class="error"><p>' . esc_html(urldecode( $_GET['sl_message'] )) . '</p></div>';
 							break;
 						case 'true':
 						default:
@@ -197,7 +197,7 @@ defined('ABSPATH') OR exit;
 					}
 					$base_url = $this->get_menu_page();
 					if ( ! empty( $message ) ) {
-						$redirect = add_query_arg( array( 'sl_activation' => 'false', 'sl_message' => urlencode( $message ) ), $base_url );
+						$redirect = add_query_arg( array( 'sl_activation' => 'false', 'sl_message' => esc_html(urlencode( $message )) ), esc_url($base_url) );
 						wp_redirect( $redirect );
 						exit();
 					}

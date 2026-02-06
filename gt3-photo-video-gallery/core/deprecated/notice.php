@@ -4,7 +4,7 @@ defined('ABSPATH') OR exit;
 add_action('wp_ajax_gt3pg_disable_notice_pro_required_update', 'wp_ajax_gt3pg_disable_notice_pro_required_update');
 
 function wp_ajax_gt3pg_disable_notice_pro_required_update(){
-	if(!isset($_POST['gt3_action']) || !isset($_POST['_nonce']) || wp_verify_nonce($_POST['_nonce'],'disable_notice_pro_required_update')) {
+	if(!isset($_POST['gt3_action']) || !isset($_POST['_nonce']) || !wp_verify_nonce($_POST['_nonce'],'disable_notice_pro_required_update')) {
 		wp_die(0);
 	}
 			update_option('gt3pg_disable_notice_pro_required_update', true);

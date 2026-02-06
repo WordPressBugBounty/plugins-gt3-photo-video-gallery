@@ -779,12 +779,12 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 		}
 
 		public function manage_posts_custom_column($column, $post_id){
-			$this_url = $_SERVER['REQUEST_URI'];
+			$this_url = esc_url_raw( $_SERVER['REQUEST_URI'] );
 			switch($column) {
 				case 'thumbnail':
 					if(get_post_thumbnail_id($post_id)) {
 						$img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post_id));
-						echo '<img width="50" height="50" src="'.$img_src[0].'" />';
+						echo '<img width="50" height="50" src="'.esc_url($img_src[0]).'" />';
 					} else {
 						$gallery = self::get_gallery_images($post_id);
 						$echo    = '';
@@ -798,7 +798,7 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 								}
 								$img_src = wp_get_attachment_image_src($image_id);
 								if (is_array($img_src)) {
-									$echo = '<img width="50" height="50" src="'.$img_src[0].'" />';
+									$echo = '<img width="50" height="50" src="'.esc_url($img_src[0]).'" />';
 								}
 								if(!empty($echo)) {
 									break;
@@ -1162,7 +1162,7 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 
 		public function get_template($templates){
 			$object = get_queried_object();
-			if($object->post_type === self::post_type) {
+			if ($object && isset($object->post_type) && $object->post_type === self::post_type) {
 				if(is_array($templates) && count($templates)) {
 					foreach($templates as &$template) {
 						$template = str_replace('single', 'page', $template);
@@ -1177,4 +1177,3 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 
 	\GT3_Post_Type_Gallery::instance();
 }
-

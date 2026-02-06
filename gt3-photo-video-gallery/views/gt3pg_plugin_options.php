@@ -23,6 +23,17 @@ wp_enqueue_script('gt3pg_admin_js');
 </div>
 <div class="gt3pg_admin_wrap">
 	<div class="gt3pg_inner_wrap">
+		<?php
+		$plugin            = 'gt3-photo-video-gallery-pro/gt3-photo-video-gallery-pro.php';
+		$installed_plugins = get_plugins();
+
+		if(!isset($installed_plugins[$plugin])) {
+			?>
+			<div class="get_pro">The<span class="gt3pg_theme_ver">Pro version</span> of GT3 Photo & Video Gallery is now available. Save 50% <a href="https://gt3themes.com/gt3-photo-and-video-gallery-pro/">View Pro Version</a>
+			</div>
+			<?php
+		}
+		?>
 		<form action="" method="post" class="gt3pg_page_settings">
 			<div class="gt3pg_main_line">
 				<div class="gt3pg_themename">
@@ -33,18 +44,6 @@ wp_enqueue_script('gt3pg_admin_js');
 					<a href="<?php echo esc_attr($plugin_help) ?>" target="_blank"><?php esc_html_e('Need Help?', 'gt3pg') ?></a>
 				</div>
 				<div class="clear"></div>
-				<?php
-				$plugin            = 'gt3-photo-video-gallery-pro/gt3-photo-video-gallery-pro.php';
-				$installed_plugins = get_plugins();
-
-				if(!isset($installed_plugins[$plugin])) {
-					?>
-					<div class="get_pro">The<span class="gt3pg_theme_ver">Pro version</span> is now available. You can check it here -&gt;
-						<a href="https://gt3themes.com/gt3-photo-video-gallery-pro-is-live-now/" style="color: #ffffff;">View Pro Version</a>
-					</div>
-					<?php
-				}
-				?>
 			</div>
 			<?php
 				wp_enqueue_script('block-library');

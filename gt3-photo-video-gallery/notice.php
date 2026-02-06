@@ -143,7 +143,7 @@ class GT3_Notice {
 
 
 	function pro_version(){
-		$msg   = 'The <b>Pro version</b> of GT3 Photo & Video Gallery is now available. <span style="color: red;">Save 50% OFF</span> -&gt; <a href="https://gt3themes.com/gt3-photo-video-gallery-pro-is-live-now/" target="_blank">View Pro Version</a>';
+		$msg   = 'The <b>Pro version</b> of GT3 Photo & Video Gallery is now available. <span style="color: red;">Save 50% OFF</span> -&gt; <a href="https://gt3themes.com/gt3-photo-and-video-gallery-pro/" target="_blank">View Pro Version</a>';
 		$class = 'notice notice-warning gt3pg_error_notice gt3pg_50_off_info';
 		echo '<div class="'.$class.'" style="position: relative"><p>'.$msg.'</p>'.(current_user_can('manage_options') ? '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>' : '').'</div>';
 		?>

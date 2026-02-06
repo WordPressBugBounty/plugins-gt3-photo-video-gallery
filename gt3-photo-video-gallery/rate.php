@@ -1,4 +1,7 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if (get_option('gt3pg_disable_rate_notice')) return;
 $rate_time = get_option('gt3_rate_date');
 if ($rate_time == false) {

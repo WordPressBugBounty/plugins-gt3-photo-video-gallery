@@ -77,7 +77,7 @@ function gt3pg_add_admin_page(){
 	add_menu_page(
 		apply_filters('gt3pg_menu_page_title', 'GT3 Gallery Lite'),
 		apply_filters('gt3pg_menu_title', 'GT3 Gallery Lite'),
-		'administrator',
+		'manage_options',
 		'gt3_photo_gallery_options',
 		'gt3pg_plugin_options',
 		Assets::get_dist_url().'img/logo.png',
@@ -172,7 +172,7 @@ function gt3pg_plugin_action_links($links, $file){
 
 		$plugin            = 'gt3-photo-video-gallery-pro/gt3-photo-video-gallery-pro.php';
 		$installed_plugins = get_plugins();
-		$pro_url           = 'https://gt3themes.com/gt3-photo-video-gallery-pro-is-live-now/';
+		$pro_url           = 'https://gt3themes.com/gt3-photo-and-video-gallery-pro/';
 
 		if(!isset($installed_plugins[$plugin])) {
 			$links['get-pro'] = '<a href="'.esc_url($pro_url).'" target="_blank" style="color: #46b450; font-weight: bold">Go Pro</a>';

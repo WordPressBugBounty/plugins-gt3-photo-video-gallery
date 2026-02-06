@@ -491,7 +491,7 @@
 				return false; // Cache is expired
 			}
 
-			return unserialize( $cache['value'] );
+			return maybe_unserialize( $cache['value'] );
 
 		}
 
