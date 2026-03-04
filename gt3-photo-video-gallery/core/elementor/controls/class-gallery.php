@@ -21,13 +21,23 @@ class Gallery extends Base_Data_Control {
 	public function get_value($control, $widget){
 
 		if(isset($widget[$control['name']]) && !empty($widget[$control['name']])) {
-			$images = json_decode($widget[$control['name']], true);
-			if(!json_last_error() && is_array($images)) {
-				foreach($images as &$image) {
-					$image = $image['id'];
+			$value = $widget[$control['name']];
+
+			// Handle case when value is already an array
+			if (is_array($value)) {
+				$images = array();
+				foreach($value as $image) {
+					$images[] = is_array($image) && isset($image['id']) ? $image['id'] : $image;
 				}
 			} else {
-				$images = explode(',', $widget[$control['name']]);
+				$images = json_decode($value, true);
+				if(!json_last_error() && is_array($images)) {
+					foreach($images as &$image) {
+						$image = $image['id'];
+					}
+				} else {
+					$images = explode(',', $value);
+				}
 			}
 		} else {
 			$images = array();

@@ -1088,7 +1088,7 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 					$atts['ids'] = self::get_gallery_images($atts['id']);
 				}
 			}
-			if(!$isREST && (($post->post_type === self::post_type && $rendered) || !did_action('wp_print_scripts'))) {
+			if(!$isREST && (($post->post_type === self::post_type && $rendered) || !did_action('template_redirect') || doing_action('wp_head') || doing_action('wpseo_head'))) {
 				return '';
 			}
 

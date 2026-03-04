@@ -78,6 +78,9 @@ class Gallery {
 				register_block_type('gt3-photo-video-gallery/gallery', array(
 					'attributes'      => $this->attributes,
 					'render_callback' => 'gt3pg_gallery_shortcode',
+					'supports'        => array(
+						'inserter' => false,
+					),
 				));
 			}
 		});

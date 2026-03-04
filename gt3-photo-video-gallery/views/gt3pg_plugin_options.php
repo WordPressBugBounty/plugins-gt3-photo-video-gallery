@@ -29,7 +29,7 @@ wp_enqueue_script('gt3pg_admin_js');
 
 		if(!isset($installed_plugins[$plugin])) {
 			?>
-			<div class="get_pro">The<span class="gt3pg_theme_ver">Pro version</span> of GT3 Photo & Video Gallery is now available. Save 50% <a href="https://gt3themes.com/gt3-photo-and-video-gallery-pro/">View Pro Version</a>
+			<div class="get_pro"><span>The <span class="gt3pg_theme_ver">Pro version</span> of GT3 Photo &amp; Video Gallery is now available. Use promo code <strong>50OFF</strong> and get 50% discount.</span> <a href="https://gt3themes.com/gt3-photo-and-video-gallery-pro/" target="_blank">View Pro Version</a>
 			</div>
 			<?php
 		}

@@ -2,8 +2,9 @@
 Contributors: gt3themes
 Tags: gallery, image gallery, wordpress gallery plugin, photo gallery, gallery block
 Requires at least: 6.0
-Tested up to: 6.9
-Stable tag: 2.7.7.27
+Tested up to: 7.0
+Requires PHP: 8.0
+Stable tag: 2.7.7.28
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,7 +34,7 @@ The lite version is fully compatible with Elementor page builder. It comes with 
 <h3>DIVI Compatibility</h3>
 The lite version has a custom post type "GT3 Galleries" that supports absolutely new "shortcode" system. You can create Grid and Masonry photo gallery and put its shortcode in the DIVI page builder.
 
-Stay Tuned: The new Gutenberg gallery blocks, Elementor and WPBakery compatible photo galleries will be released soon. Follow us on [Twitter](https://twitter.com/gt3themes/) and [Facebook](https://www.facebook.com/gt3themes/) to get latest news and updates.
+Stay Tuned: The new Gutenberg gallery blocks, Elementor and WPBakery compatible photo galleries will be released soon. Follow us on [X](https://x.com/gt3themes/) and [Facebook](https://www.facebook.com/gt3themes/) to get latest news and updates.
 
 <h3>Pro Version</h3>
 
@@ -77,10 +78,10 @@ There is a Pro version of this plugin. You can get it with 50% discount. Limited
 <h3>GT3 Photo & Video Gallery in Action</h3>
 
 [Oni Photography WordPress Theme](https://livewp.site/demos/?product=Oni)
-[JohnBlack Photographers WordPress Theme](https://livewp.site/wp/md/johnblack/gt3-photo-video-gallery/)
-[SOHO - Fullscreen Photo & Video WordPress Theme](https://gt3themes.com/wordpress/soho-fullscreen-photo-video-wordpress-theme/)
-[Photo Fullscreen WordPress Theme - Fliper](https://gt3themes.com/wordpress/photo-fullscreen-responsive-wordpress-theme-fliper/)
-[Creative Portfolio WordPress Theme - SOHO Pro](https://gt3themes.com/wordpress/creative-portfolio-wordpress-theme-soho-pro/)
+[JohnBlack Photographers WordPress Theme](https://livewp.site/demos/?product=JohnBlack)
+[SOHO - Fullscreen Photo & Video WordPress Theme](https://livewp.site/demos/?product=Soho)
+[Photo Fullscreen WordPress Theme - Fliper](https://livewp.site/demos/?product=Fliper)
+[Creative Portfolio WordPress Theme - SOHO Pro](https://livewp.site/demos/?product=SOHOPro)
 
 
 <h3>The advantages of GT3 Photo & Video Gallery plugin</h3>
@@ -178,6 +179,13 @@ You can add any type of the gallery block into the product description. But we a
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 2.7.7.28 =
+* Improved: Plugin core functionality
+* Improved: Galleries performance
+* Added: WordPress 7.0 compatibility
+* Fixed: CPT gallery issue with FSE sites
+* Fixed: Minor bug fixes
 
 = 2.7.7.27 =
 * Improved: Plugin core functionality
