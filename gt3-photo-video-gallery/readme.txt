@@ -4,7 +4,7 @@ Tags: gallery, image gallery, wordpress gallery plugin, photo gallery, gallery b
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 2.7.7.28
+Stable tag: 2.7.7.29
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -58,6 +58,7 @@ There is a Pro version of this plugin. You can get it with 50% discount. Limited
 * Flow gallery
 * Ribbon slider
 * Justified gallery
+* Cascading slider (NEW)
 * Photo carousel
 * Photo gallery with video thumbnails
 * Photo galleries with a filter by categories
@@ -179,6 +180,13 @@ You can add any type of the gallery block into the product description. But we a
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 2.7.7.29 =
+* Improved: Plugin core functionality
+* Improved: Galleries performance
+* Added: Cascading slider in Pro version
+* Fixed: webP file format issue
+* Fixed: Minor bug fixes
 
 = 2.7.7.28 =
 * Improved: Plugin core functionality

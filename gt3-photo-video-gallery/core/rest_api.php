@@ -181,7 +181,8 @@ class Rest {
 			'post_type'      => 'attachment',
 			'post_mime_type' => array(
 				'image/jpeg',
-				'image/png'
+				'image/png',
+				'image/webp'
 			),
 			'posts_per_page' => '-1',
 			'fields'         => 'ids',
@@ -282,7 +283,8 @@ class Rest {
 				'post_type'      => 'attachment',
 				'post_mime_type' => array(
 					'image/jpeg',
-					'image/png'
+					'image/png',
+					'image/webp'
 				),
 				'posts_per_page' => '-1',
 				'fields'         => 'ids',
