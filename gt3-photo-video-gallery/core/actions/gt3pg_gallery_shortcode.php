@@ -315,7 +315,7 @@ function gt3pg_gallery_shortcode($attr){
 				if(isset($image_meta['height'], $image_meta['width']) && $atts['thumb_type'] !== 'masonry') {
 					$orientation = ($image_meta['height'] < $image_meta['width']) ? 'landscape' : 'portrait';
 				}
-				$attrTitle = isset($atts['showTitle']) && $atts['showTitle'] == '1' ? ' title="'.$attachment->post_title.'"' : '';
+				$attrTitle = isset($atts['showTitle']) && $atts['showTitle'] == '1' ? ' title="'.esc_attr($attachment->post_title).'"' : '';
 
 				$image_output =
 					'<div class="gt3pg_img_wrap '.$orientation.'" style="background-image: url('.$media_url.');" data-width="'.$img_src_orig[1].'" data-height="'.$img_src_orig[2].'" data-i="'.$i.'" '.$attrTitle.'>
