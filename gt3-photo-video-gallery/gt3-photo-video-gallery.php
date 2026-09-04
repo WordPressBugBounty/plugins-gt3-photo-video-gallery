@@ -4,7 +4,9 @@
  ** Plugin URI: https://gt3themes.com/
  ** Description: This powerful plugin lets you extend the functionality of the default WordPress gallery. You can easily customize the look and feel of the photo or video gallery.
  ** Discover the power of GT3themes products.
- ** Version: 2.7.7.31
+ ** Version: 2.7.7.32
+ ** Requires at least: 6.3
+ ** Requires PHP: 8.0
  ** Author: GT3 Photo Gallery
  ** Author URI: https://gt3themes.com/
  ** Text Domain: gt3pg
@@ -16,7 +18,7 @@ if(!defined('ABSPATH')) {
 } // Exit if accessed directly
 require_once __DIR__.'/core/deprecated/index.php';
 
-if(!version_compare(PHP_VERSION, '7.3', '>=')) {
+if(!version_compare(PHP_VERSION, '8.0', '>=')) {
 	add_action('admin_notices', 'gt3pg__fail_php_version');
 } else {
 	define('GT3PG_LITE_PLUGIN_ROOT_FILE', __FILE__);
@@ -35,7 +37,7 @@ if(!version_compare(PHP_VERSION, '7.3', '>=')) {
 }
 
 function gt3pg__fail_php_version(){
-	$message      = sprintf('GT3 Photo & Video Gallery - Lite requires PHP version %1$s+, plugin is currently NOT ACTIVE.', '7.3');
+	$message      = sprintf('GT3 Photo & Video Gallery - Lite requires PHP version %1$s+, plugin is currently NOT ACTIVE.', '8.0');
 	$html_message = sprintf('<div class="error">%s</div>', wpautop($message));
 	echo wp_kses_post($html_message);
 }

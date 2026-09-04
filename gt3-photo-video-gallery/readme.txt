@@ -1,10 +1,10 @@
 === Photo Gallery - GT3 Image Gallery & Gutenberg Block Gallery ===
 Contributors: gt3themes
 Tags: gallery, image gallery, wordpress gallery plugin, photo gallery, gallery block
-Requires at least: 6.0
+Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 2.7.7.31
+Stable tag: 2.7.7.32
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -181,6 +181,11 @@ You can add any type of the gallery block into the product description. But we a
 == Upgrade Notice ==
 
 == Changelog ==
+
+= 2.7.7.32 =
+* Fixed: Galleries did not render inside the iframed block editor introduced in WordPress 7.1
+* Improved: Blocks migrated to Block API version 3
+* Changed: Minimum requirements raised to WordPress 6.3 and PHP 8.0
 
 = 2.7.7.31 =
 * Improved: Plugin core functionality

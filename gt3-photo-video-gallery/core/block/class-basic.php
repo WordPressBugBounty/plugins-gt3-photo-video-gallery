@@ -97,6 +97,7 @@ abstract class Basic {
 	public function initHandler(){
 		if(function_exists('register_block_type')) {
 			register_block_type($this->slug, array(
+				'api_version'     => 3,
 				'attributes'      => $this->default_attributes,
 				'render_callback' => array( $this, 'render_block' ),
 			));
