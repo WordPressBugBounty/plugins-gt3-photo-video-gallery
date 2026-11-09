@@ -124,7 +124,7 @@ abstract class Basic {
 		switch($settings['source']) {
 			case 'gallery':
 				$settings['ids'] = (bool) $settings['gallery']
-					? ($GALLERY ? $GALLERY->get_gallery_images($settings['gallery']) : array())
+					? ($GALLERY ? $GALLERY::get_viewable_gallery_images($settings['gallery']) : array())
 					: array();
 				break;
 			case 'categories':
@@ -154,7 +154,7 @@ abstract class Basic {
 						$module_wp_query->the_post();
 						/* @var \WP_Post $image_post */
 						$gallery_id     = get_the_ID();
-						$images_gallery = $GALLERY->get_gallery_images($gallery_id);
+						$images_gallery = $GALLERY::get_viewable_gallery_images($gallery_id);
 						if(is_array($images_gallery) && count($images_gallery)) {
 							$categories = get_the_terms($gallery_id, $GALLERY::taxonomy);
 							if(!$categories || is_wp_error($categories)) {

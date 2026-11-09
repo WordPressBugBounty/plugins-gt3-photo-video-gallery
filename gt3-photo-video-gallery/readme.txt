@@ -4,7 +4,7 @@ Tags: gallery, image gallery, wordpress gallery plugin, photo gallery, gallery b
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 2.7.7.32
+Stable tag: 2.7.7.33
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 

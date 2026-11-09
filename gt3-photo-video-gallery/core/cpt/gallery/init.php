@@ -250,6 +250,7 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 			$this->load_settings();
 
 			add_shortcode('gt3-gallery', array( $this, 'render_shortcode' ));
+			add_filter('rest_prepare_'.self::post_type, array( $this, 'rest_prepare_gallery' ), 10, 2);
 
 			add_action('init', array( $this, 'init' ));
 			add_filter('parent_file', array( $this, 'fix_current_screen' ));
@@ -884,6 +885,40 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 		}
 
 
+		public static function can_view_gallery($post_id){
+			$gallery_post = get_post($post_id);
+			if(!$gallery_post instanceof \WP_Post || $gallery_post->post_type !== self::post_type) {
+				return false;
+			}
+
+			$allowed = current_user_can('edit_post', $gallery_post->ID)
+			           || ('publish' === $gallery_post->post_status && !post_password_required($gallery_post));
+
+			return (bool) apply_filters('gt3pg/gallery/can_view', $allowed, $gallery_post);
+		}
+
+		public static function get_viewable_gallery_images($post_id, $with_id = false){
+			return self::can_view_gallery($post_id) ? self::get_gallery_images($post_id, $with_id) : array();
+		}
+
+		public function rest_prepare_gallery($response, $gallery_post){
+			if($response instanceof \WP_REST_Response
+			   && post_password_required($gallery_post)
+			   && !current_user_can('edit_post', $gallery_post->ID)) {
+				$data = $response->get_data();
+				if(isset($data['meta']) && is_array($data['meta'])) {
+					foreach(array( '_cpt_gt3_gallery_images', '_cpt_gt3_gallery_images_count', '_cpt_gt3_gallery_attributes' ) as $key) {
+						if(key_exists($key, $data['meta'])) {
+							unset($data['meta'][$key]);
+						}
+					}
+					$response->set_data($data);
+				}
+			}
+
+			return $response;
+		}
+
 		public static function get_gallery_images($post_id, $with_id = false){
 			$gallery = get_post_meta($post_id, '_cpt_gt3_gallery_images', true);
 
@@ -1076,6 +1111,9 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 				$orig_atts = $atts;
 				$isREST    = true;
 				$post      = get_post($postId);
+				if(self::post_type === get_post_type($postId) && !self::can_view_gallery($postId)) {
+					return rest_ensure_response(array( 'rendered' => '' ));
+				}
 			} else {
 				$atts = shortcode_atts(
 					array(
@@ -1084,6 +1122,13 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 						'ids'  => '',
 					), $atts
 				);
+				if(self::post_type === get_post_type($atts['id']) && !self::can_view_gallery($atts['id'])) {
+					$gallery_post = get_post($atts['id']);
+
+					return ('publish' === $gallery_post->post_status && post_password_required($gallery_post))
+						? get_the_password_form($gallery_post)
+						: '';
+				}
 				if(empty($atts['ids'])) {
 					$atts['ids'] = self::get_gallery_images($atts['id']);
 				}
@@ -1101,10 +1146,14 @@ if(!class_exists('GT3_Post_Type_Gallery')) {
 			if($atts['type'] === '') {
 				$atts['type'] = $settings['defaultType'];
 			}
-			if(!in_array($atts['type'], array( 'grid', 'masonry', 'packery' ))) {
+			if(!in_array($atts['type'], array( 'grid', 'masonry' ), true)) {
 				$atts['type'] = 'grid';
 			}
 			$gallery = sprintf('GT3\PhotoVideoGallery\Block\%1$s', ucfirst($atts['type']));
+			if(!class_exists($gallery)) {
+				$atts['type'] = 'grid';
+				$gallery       = 'GT3\PhotoVideoGallery\Block\Grid';
+			}
 
 			$attributes = get_post_meta($atts['id'], '_cpt_gt3_gallery_attributes', true);
 			if(is_string($attributes) && !empty($attributes)) {
